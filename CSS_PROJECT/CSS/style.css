@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+    --main-bg-color: #3d0c03;
+  }
+  
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background: var( --main-bg-color);
+    color: white;
+    border: 2px solid;
+    height: 58px;
+    font-family: 'Rubik', sans-serif;
+}
+ nav{
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 0 -15px;
+} 
+.logo img{
+    width: 100px;
+    height:50px ;
+    padding: 0 4px;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    /* to make hyperlink inline instead list */
+    align-items: center;
+    height: 58px; 
+}
+nav ul li{
+    list-style: none;
+    padding: 23px;
+    
+}
+nav ul li a:hover{
+    color: rgb(121, 148, 235);
+    font-weight: bold;
+/* removes underline */
+}
+nav ul li a{
+    color: white;
+    text-decoration: none; 
+/* removes underline */
+}
+.search{
+    display: flex;
+    align-items: center;/*To make it vertically center*/
+    width: 400px;
+}
+.search input{
+    width: 493px;
+    height: 23px;
+    border-radius: 5 px;
+    margin: 0 20px 0 56px;
+    padding:0 15px ;
+ 
+}
+.search button{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    
+}
+.container{
+    /* min-height: calc(100vh-158px); */
+    height: 480px;
+}
+
+footer{
+    /* background-color: black; */
+    background: var( --main-bg-color);
+    color: white;
+    height: 100px;
+    font-family: 'Rubik', sans-serif;
+}
