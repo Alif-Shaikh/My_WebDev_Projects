@@ -70,11 +70,35 @@ nav ul li a{
     font-weight: 900;
     
 }
+/* .slider{
+  margin: 20px 20px 20px 20px;
+    width: 80vw;
+    align-items: center;
+    align-content: center; 
+}*/
+
+
+
 .container{
     /* min-height: calc(100vh-158px); */
     height: 480px;
 }
+.slider{
+    display: block;
+    margin: auto;padding-left: 30vw;
+}
+.cart{
+    background-color: rgb(109, 140, 175);
+    font-family: 'Rubik', sans-serif;
 
+}
+.cart h2{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+.cart-item{
+
+}
 footer{
     /* background-color: black; */
     background: var( --main-bg-color);
