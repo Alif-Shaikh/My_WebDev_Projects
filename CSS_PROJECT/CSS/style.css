@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 :root {
-    --main-bg-color: #3d0c03;
+    --main-bg-color: #020100;;
   }
   
 
@@ -70,39 +70,45 @@ nav ul li a{
     font-weight: 900;
     
 }
-/* .slider{
-  margin: 20px 20px 20px 20px;
-    width: 80vw;
-    align-items: center;
-    align-content: center; 
-}*/
-
-
-
-.container{
-    /* min-height: calc(100vh-158px); */
-    height: 480px;
-}
-.slider{
+div{
     display: block;
-    margin: auto;padding-left: 30vw;
 }
-.cart{
-    background-color: rgb(109, 140, 175);
+.container{
+    min-height: 504px;
+}
+
+.slider{
+    width: 22vw;
+    margin: 12px auto;
+}
+.card{
+    max-width: 90vw;
+    margin: 30px auto;
     font-family: 'Rubik', sans-serif;
+}
+.cards{
+    display: flex;
+    flex-direction: row;align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* overflow: scroll; */
+
 
 }
-.cart h2{
+.card-item{
+    display: inline-flex;
+    justify-content: center;
+    width: 11vw;
+    flex-direction: column;
+    margin: 0 15px;
+}
+.card h2{
     font-family: 'Rubik', sans-serif;
-    text-align: center;
 }
-.cart-item{
-
-}
-footer{
+footer{    
     /* background-color: black; */
     background: var( --main-bg-color);
     color: white;
-    height: 100px;
+    height: 12vh;
     font-family: 'Rubik', sans-serif;
 }
