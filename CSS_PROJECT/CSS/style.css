@@ -16,9 +16,12 @@ header{
     border: 2px solid;
     height: 58px;
     font-family: 'Rubik', sans-serif;
+    z-index: 1;
 }
+
  nav{
     display: flex;
+   
 }
 .logo{
     display: flex;
@@ -58,7 +61,7 @@ nav ul li a{
     width: 400px;
 }
 .search input{
-    width: 493px;
+    width: 30vw;
     height: 23px;
     border-radius: 5 px;
     margin: 0 20px 0 56px;
@@ -78,9 +81,13 @@ div{
 }
 
 .slider{
-    width: 22vw;
-    margin: 12px auto;
+margin: 12px auto;
+  overflow: hidden;
+ 
+  display: flex;
+  justify-content: center;
 }
+
 .card{
     max-width: 90vw;
     margin: 30px auto;

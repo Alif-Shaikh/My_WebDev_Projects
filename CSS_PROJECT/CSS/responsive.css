@@ -1,0 +1,60 @@
+@media screen and (max-width:1000px){
+   body{
+    background-color: rgb(255, 230, 206);
+   }
+   header{
+    height: 133px;
+   }
+   nav{
+    flex-direction: column;
+   }
+   .logo{
+    justify-content: center;
+    margin: 2px 0 0 0;
+   }
+   nav ul{
+    justify-content: center;
+   }
+   .logo{
+    justify-content: center;
+   }
+   .logo img{
+    margin: 8px 0 0 0;
+   }
+   .search{
+    
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+   }
+   .search input{
+
+    justify-content: center;
+    align-items: center;
+   }
+   nav ul{
+    height: 34px;
+   }
+   .slider{
+    height: 25vh ;
+   }
+   .cards{
+    overflow: hidden;
+   }
+   .card-item{
+    padding: 0 40px;
+
+}
+/* .text-center{
+    text-align: center;
+    justify-content: center;
+} */
+.my-1{
+    width: 34vw;
+    text-align: center;
+    
+ } 
+   .card-item img{
+    width: 140px;
+
+   }}
