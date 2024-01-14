@@ -58,45 +58,45 @@
             TODO's LIST
         </h2>
 
-    <!-- FORM -->
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">Add an item to the list.</small>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3"></textarea>
-              </div>
-            <button type="submit" id="add"class="btn btn-primary">Add To List</button>
-          
-          
-          <div id="items" class="my-4"></div>
-    <h2>Your Items</h2>
+        <!-- FORM -->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">Add an item to the list.</small>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <button type="submit" id="add" class="btn btn-primary">Add To List</button>
 
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">SNO</th>
-            <th scope="col">Item Title</th>
-            <th scope="col">Item Description</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Get some coffee</td>
-            <td>You need coffee as you are a coder</td>
-            <td><button class="btn btn-sm btn-primary">Delete</button></td>
-            
-          </tr>
-         
-        </tbody>
-      </table>
+
+        <div id="items" class="my-4"></div>
+        <h2>Your Items</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">SNO</th>
+                    <th scope="col">Item Title</th>
+                    <th scope="col">Item Description</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Get some coffee</td>
+                    <td>You need coffee as you are a coder</td>
+                    <td><button class="btn btn-sm btn-primary">Delete</button></td>
+
+                </tr>
+
+            </tbody>
+        </table>
     </div>
     </div>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -108,20 +108,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script>
-            add=document.getElementById('add');
-            add.addEventListener('click',()=>{
-                console.log("Updating List...");
-                tit=document.getElementById('title').value;
-                desc=document.getElementById('description').value;
-                if(localStorage.getItem('itemsjson')==null){
-                   itemJsonArray=[];
-                   itemJsonArray.push([tit,desc]);
-                   localStorage.setItem('itemsJson',JSON.stringify(itemJsonArray))
-
-                }
-            })
-        </script>
+    <script>
+        add = document.getElementById('add');
+        add.addEventListener('click', () => {
+            console.log("Updating List...");
+            tit = document.getElementById('title').value;
+            desc = document.getElementById('description').value;
+            if (localStorage.getItem('itemsJson') == null) {
+                itemJsonArray = [];
+                itemJsonArray.push([tit, desc]);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+            }
+            else {
+                itemJsonArrayStr = localStorage.getItem('itemsJson'); //available in string format
+                itemJsonArray = JSON.parse(itemJsonArrayStr); //converting it into object
+                itemJsonArray.push([tit, desc]);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+            }
+        });
+    </script>
 </body>
 
 </html>
