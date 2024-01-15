@@ -66,7 +66,9 @@
             <textarea class="form-control" id="description" rows="3"></textarea>
         </div>
 
-        <button type="submit" id="add" class="btn btn-primary">Add To List</button>
+        <button  id="add" class="btn btn-primary">Add To List</button>
+        <button  id="clear" class="btn btn-primary" onclick="clearStorage()">Clear List</button>
+
         
 
         <div id="items" class="my-4">
@@ -164,7 +166,13 @@ itemJsonArray.splice(itemIndex,1);
                 localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
                 update();
         }
-      
+        function clearStorage(){
+            if(confirm("Do you really want to clear?")){
+            console.log('Clearing The Storage');
+            localStorage.clear();
+            update();
+            }
+        }
     </script>
 </body>
 
