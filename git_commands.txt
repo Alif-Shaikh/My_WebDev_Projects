@@ -1,0 +1,72 @@
+code .       =>to open vs code
+git config --global user.name Alif
+git config --global user.email imalif.shaikh999@gmail.com
+git init        =>initialising empty git repository
+ls              =>to list all files
+ls -lart        =>hidden folders/files
+git status      =>current status of git repo
+git add .       =>To add all files/folders to staging area     OR git add -A
+(use "git rm --cached <file>..." to unstage)
+
+git commit      =>adding to repo
+esc + :wq       =>to leave vi editor after giving msg for the 1st commit
+
+git commit -m "<msg>"     =>to avoid vi editor
+git commit  -a -m "<msg>"     =>to skip staging area   
+
+clear                 =>to clear terminal
+git checkout <file>    =>match with last commit & last commit is restored
+git checkout -f        =>to match all files with last commit & last commit is restored
+git log               =>info about commits
+git log -p -1         =>to view last commit  => if -2 then displays last 2 commits
+q                  =>to quit
+git diff           =>comparing working directory with staging area
+git diff --staged   =>comparing staging area with last commit
+
+git rm <file>      =>remove file from commit (permanently)
+git rm -f <file>      =>remove file from commit (forcefully)
+
+git rm --cached <file>      =>remove file from staging area and add into untracked files
+
+git status -s        =>summarized status
+.gitignore          =>to hide files
+
+
+BRANCHES------------------------------
+
+git branch                =>displaying current branch
+* master
+git branch feature1        =>creating new feature1 branch
+git checkout feature1      =>changing branch to feature1
+* feature1
+  master
+git branch -d <branchname> =>to delete branch
+if u r at * master
+git merge feature1        =>will merge feature1 to master
+
+
+REPO----------------------------------
+
+Adding remote repo
+git remote add origin https://github.com/Alif-Shaikh/learning_git.git
+
+git remote
+origin
+
+git remote -v             =>will give url
+
+git push origin master    =>if repo is public
+----------------------------------------------------------------
+
+in case of below error=>
+
+$ git push origin master
+To https://github.com/Alif-Shaikh/Learning_ReactJS.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Alif-Shaikh/Learning_Reac
+tJS.git'
+
+
+use=>
+git pull --rebase origin master
+git push -u origin master
